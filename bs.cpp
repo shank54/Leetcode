@@ -53,6 +53,7 @@ int main()
 		countJ = 0;
 		countR = 0;
 		int Jc=0;
+		int  Rc=0;
 		int *v = new int[i];
 	for(int j=0;j<i;j++){
 		v[j]=(rand()%(i));
@@ -62,15 +63,30 @@ int main()
    	int tar= rand()%(i);
    //int j = Jessie(v,0,i-1,tar);
    int r = Riley(v,0,i-1,tar);
-   Jc += countR;
-   //cout<<"R"<<countR<<endl;
+   Jc += countJ;
+   
+   Rc += countR;
+  //cout<<"R"<<countR<<endl;
    }
-   cout<<Jc/1000<<endl;
+   //cout<<Jc<<endl;
+   cout<<Rc/1000<<endl;
    
    delete v;
 	}
 	
-	
+	/*int v[100];
+	int Jc = 0;
+	int Rc = 0;
+	for(int i=0;i<100;i++){
+		v[i] = i;
+	}
+	int j = Jessie(v,0,100,1);
+	int r = Riley(v,0,100,1);
+	Jc = countJ;
+	Rc = countR;
+	cout<<Jc<<endl;
+	cout<<Rc<<endl;
+	*/
 
    return 0;
 }
